@@ -473,8 +473,7 @@ Do not commit API keys, private environment files, confidential case records, or
 ## Project Status
 
 CIPHER is deployed on AWS, 
-
-The deployed build should be evaluated using its actual public URL and reproducible test results. Model identity, enabled features, and live inference behavior should be documented according to the configuration and tests of that build.
+DigitalOcean deployment is planned but has not been completed. The deployment manifest currently in this repository, `render.yaml`, is for Render, not DigitalOcean. Do not consider the DigitalOcean track complete until the app has actually been deployed there and the live deployment has been tested.
 
 ---
 
