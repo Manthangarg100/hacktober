@@ -1,0 +1,17 @@
+CIPHER Gemma 4 integration edits
+
+Updated: CIPHER_CLEAN_FINAL/.env.example :: GEMINI_MODEL=gemini-3.8-flash
+Updated: CIPHER_CLEAN_FINAL/.env.example :: # AI providers
+# LLM provider chain: Gemini free -> OpenRouter free ->
+Updated: CIPHER_CLEAN_FINAL/python_backend/.env.example :: GEMINI_MODEL=gemini-3.8-flash
+Updated: CIPHER_CLEAN_FINAL/python_backend/.env.example :: # AI providers
+# LLM provider chain: Gemini free -> OpenRouter free ->
+Updated: CIPHER_CLEAN_FINAL/neo4j.env.example :: GEMINI_MODEL=gemini-3.6-flash
+Updated: CIPHER_CLEAN_FINAL/python_backend/main.py :: os.getenv("GEMINI_MODEL", "gemini-3.6-flash") or "gemini-3.6-flash"
+Updated: CIPHER_CLEAN_FINAL/python_backend/investigation_engine.py :: os.getenv('GEMINI_MODEL', 'gemini-3.1-flash-lite') or 'gemini-3.1-flas
+Updated: CIPHER_CLEAN_FINAL/python_backend/evidence_service.py :: os.getenv("GEMINI_MODEL", "gemini-3.6-flash")
+Updated: CIPHER_CLEAN_FINAL/render.yaml :: value: gemini-3.8-flash
+Updated: CIPHER_CLEAN_FINAL/render.yaml :: value: gemini-3.7-flash
+Updated: CIPHER_CLEAN_FINAL/RENDER_DEPLOYMENT.md :: The blueprint uses `gemini-3.8-flash` with `gemini-3.7-flash` as a mod
+
+The original project files and architecture are preserved; only configuration defaults and model-selection documentation were changed.

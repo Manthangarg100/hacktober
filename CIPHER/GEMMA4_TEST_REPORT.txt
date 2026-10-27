@@ -1,0 +1,14 @@
+CIPHER Gemma 4 package checks
+============================
+
+Static Python compilation: PASS (app.py and python_backend Python files)
+Offline provider QA: PASS (4 scenarios: Gemini primary, OpenRouter fallback,
+Ollama fallback, and all providers unavailable). The test uses a local mock
+HTTP server; it does not call a live Google API.
+Live Gemma API call: NOT RUN in the packaging environment. Run
+  python tools/test_gemma_api.py
+on the demo machine after setting GEMINI_API_KEY in the root .env.
+Full Windows launcher + browser end-to-end: NOT RUN in this Linux packaging
+environment. Validate on the target Windows machine before submission.
+
+No API key is bundled in this ZIP.

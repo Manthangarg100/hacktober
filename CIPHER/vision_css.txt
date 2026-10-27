@@ -1,0 +1,661 @@
+@media(max-width:900px){
+  .gis-inspector-stack{grid-column:3;height:100%}
+  .gis-inspector-stack > .gis-coordinates{flex-basis:54px;height:54px !important}
+}
+@media(max-width:680px){
+  .gis-inspector-stack{grid-column:1 / -1;height:auto;min-height:384px;gap:8px}
+  .gis-inspector-stack > .gis-coordinates{flex:0 0 54px;height:54px !important}
+  .gis-inspector-stack > .gis-inspector{height:330px;flex:none}
+}
+
+/* =========================================================
+   CIPHER VISION — IDENTITY ANALYSIS REDESIGN
+   Clean single-purpose visual identity workspace.
+   ========================================================= */
+.cipher-workspace .cipher-vision-view .vision-head-status,
+.cipher-workspace .cipher-vision-view .vision-refresh,
+.cipher-workspace .cipher-vision-view .vision-command-bar,
+.cipher-workspace .cipher-vision-view .vision-bottom-strip,
+.cipher-workspace .cipher-vision-view .vision-source-rail,
+.cipher-workspace .cipher-vision-view .vision-results-tools,
+.vision-side-item em{display:none!important}
+
+.cipher-workspace .cipher-vision-view .vision-room-head{
+  max-width:1480px!important;
+  margin:0 auto 18px!important;
+  padding:0 2px!important;
+}
+.cipher-workspace .cipher-vision-view .vision-title-block{gap:8px!important}
+.cipher-workspace .cipher-vision-view .vision-title-block h1{
+  font-size:clamp(42px,4.2vw,62px)!important;
+  letter-spacing:-.055em!important;
+  margin:0!important;
+}
+.cipher-workspace .cipher-vision-view .vision-reference-layout{
+  max-width:1480px!important;
+  margin:0 auto!important;
+  grid-template-columns:minmax(0,1fr) 360px!important;
+  gap:16px!important;
+  min-height:0!important;
+}
+.cipher-workspace .cipher-vision-view .vision-identity-stage,
+.cipher-workspace .cipher-vision-view .vision-results-panel{
+  min-height:690px!important;
+  border-radius:24px!important;
+  border:1px solid rgba(255,255,255,.09)!important;
+  background:linear-gradient(145deg,rgba(23,32,27,.72),rgba(4,9,7,.84))!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.09),0 28px 80px rgba(0,0,0,.34)!important;
+}
+.cipher-workspace .cipher-vision-view .vision-identity-stage{
+  padding:22px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  overflow:hidden!important;
+}
+.cipher-workspace .cipher-vision-view .vision-stage-head{
+  padding:0 0 18px!important;
+  align-items:center!important;
+  border-bottom:1px solid rgba(255,255,255,.07)!important;
+}
+.cipher-workspace .cipher-vision-view .vision-stage-head>div>span{
+  font-size:9px!important;letter-spacing:.16em!important;color:#87938b!important;
+}
+.cipher-workspace .cipher-vision-view .vision-stage-head h2{
+  margin:6px 0 0!important;font-size:24px!important;letter-spacing:-.03em!important;color:#eef3ee!important;
+}
+.vision-analysis-badge{display:flex;align-items:center;gap:8px;padding:8px 11px;border:1px solid rgba(217,255,85,.14);border-radius:999px;background:rgba(217,255,85,.035);font:8px "DM Mono",monospace;letter-spacing:.08em;color:#89958d}
+.vision-analysis-badge i{width:6px;height:6px;border-radius:50%;background:#d9ff55;box-shadow:0 0 12px rgba(217,255,85,.8)}
+.vision-analysis-badge b{font-weight:600;color:#d9ff55}
+.cipher-workspace .cipher-vision-view .vision-analysis-layout{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(300px,.84fr);gap:16px;flex:1;min-height:0;padding-top:16px}
+.vision-upload-card,.vision-analysis-panel{min-width:0;border:1px solid rgba(255,255,255,.075);border-radius:19px;background:rgba(255,255,255,.018);box-shadow:inset 0 1px rgba(255,255,255,.055)}
+.vision-upload-card{padding:15px;display:flex;flex-direction:column;min-height:520px;cursor:pointer}
+.vision-upload-topline{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font:8px "DM Mono",monospace;letter-spacing:.14em;color:#87938b}
+.vision-upload-topline small{font-size:7px;color:#66736b;border:1px solid rgba(255,255,255,.08);padding:5px 7px;border-radius:6px}
+.vision-upload-frame{position:relative;flex:1;min-height:390px;display:grid;place-items:center;overflow:hidden;border:1px dashed rgba(217,255,85,.22);border-radius:15px;background:radial-gradient(circle at 50% 42%,rgba(217,255,85,.07),transparent 27%),linear-gradient(145deg,rgba(255,255,255,.025),rgba(0,0,0,.16));transition:border-color .2s,background .2s}
+.vision-upload-card:hover .vision-upload-frame{border-color:rgba(217,255,85,.42);background:radial-gradient(circle at 50% 42%,rgba(217,255,85,.09),transparent 29%),linear-gradient(145deg,rgba(255,255,255,.03),rgba(0,0,0,.17))}
+.vision-upload-grid{position:absolute;inset:0;opacity:.38;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(circle at center,#000 0%,transparent 78%)}
+.vision-upload-corners{position:absolute;inset:24px;border:1px solid rgba(217,255,85,.10);border-radius:10px}
+.vision-podium-placeholder{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px}
+.vision-upload-icon{width:58px;height:58px;display:grid;place-items:center;border:1px solid rgba(217,255,85,.2);border-radius:16px;background:rgba(217,255,85,.045);color:#d9ff55;font-size:27px;box-shadow:0 15px 40px rgba(0,0,0,.2)}
+.vision-podium-placeholder b{font:600 17px Inter,system-ui,sans-serif;color:#eef3ee}
+.vision-podium-placeholder small{font:8px "DM Mono",monospace;letter-spacing:.08em;color:#68756d}
+.vision-action{margin-top:6px!important;padding:11px 17px!important;border-radius:9px!important;border:1px solid rgba(217,255,85,.22)!important;background:rgba(217,255,85,.07)!important;color:#d9ff55!important;font:800 9px "DM Mono",monospace!important;letter-spacing:.1em!important;cursor:pointer!important}
+.vision-action:hover{background:rgba(217,255,85,.12)!important;border-color:rgba(217,255,85,.4)!important}
+.vision-upload-foot{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-top:11px}.vision-upload-foot div{padding:9px 10px;border:1px solid rgba(255,255,255,.055);border-radius:9px;background:rgba(255,255,255,.015)}.vision-upload-foot span{display:block;font:7px "DM Mono",monospace;letter-spacing:.12em;color:#5f6b64}.vision-upload-foot b{display:block;margin-top:4px;font:800 9px "DM Mono",monospace;color:#b7c0b9}
+.vision-analysis-panel{padding:21px;display:flex;flex-direction:column;gap:20px}
+.vision-analysis-intro span{font:8px "DM Mono",monospace;letter-spacing:.15em;color:#77847b}.vision-analysis-intro h3{margin:8px 0 8px;font-size:28px;line-height:1.05;letter-spacing:-.04em;color:#eef3ee}.vision-analysis-intro p{margin:0;max-width:440px;font:11px/1.7 Inter,system-ui,sans-serif;color:#7d8981}
+.vision-analysis-steps{display:flex;flex-direction:column;gap:8px}.vision-analysis-steps article{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:10px;align-items:center;padding:12px;border:1px solid rgba(255,255,255,.065);border-radius:12px;background:rgba(255,255,255,.018)}.vision-analysis-steps article>b{font:700 9px "DM Mono",monospace;color:#d9ff55}.vision-analysis-steps strong{display:block;font:700 11px Inter,system-ui,sans-serif;color:#dfe7e1}.vision-analysis-steps article span{display:block;margin-top:3px;font:8px/1.45 Inter,system-ui,sans-serif;color:#69766e}.vision-analysis-steps i{font:7px "DM Mono",monospace;font-style:normal;color:#77847b}.vision-analysis-note{margin-top:auto;padding:12px;border-left:2px solid rgba(217,255,85,.5);background:rgba(217,255,85,.035)}.vision-analysis-note span{display:block;font:7px "DM Mono",monospace;letter-spacing:.12em;color:#d9ff55}.vision-analysis-note b{display:block;margin-top:6px;font:10px/1.5 Inter,system-ui,sans-serif;color:#aeb8b0}
+.vision-upload-frame>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:22px;border-radius:14px;z-index:3;background:#080d0a}.vision-upload-frame:has(>img) .vision-podium-placeholder{display:none}
+.cipher-workspace .cipher-vision-view .vision-face-preview{display:none!important}.cipher-workspace .cipher-vision-view .vision-face-status{margin-top:13px!important;padding:10px 12px!important;border:1px solid rgba(255,255,255,.06)!important;border-radius:10px!important;background:rgba(255,255,255,.018)!important;font:9px "DM Mono",monospace!important;color:#77847b!important}.vision-status-led{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:7px;background:#d9ff55;box-shadow:0 0 10px rgba(217,255,85,.7)}
+.cipher-workspace .cipher-vision-view .vision-match-btn{margin-top:9px!important;width:100%!important;padding:13px!important;border-radius:10px!important;font-size:9px!important;letter-spacing:.12em!important}
+.cipher-workspace .cipher-vision-view .vision-results-panel{padding:21px!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+.cipher-workspace .cipher-vision-view .vision-results-head{padding-bottom:15px!important;border-bottom:1px solid rgba(255,255,255,.07)!important}
+.cipher-workspace .cipher-vision-view .vision-results-head>div>span{font:8px "DM Mono",monospace!important;letter-spacing:.15em!important;color:#77847b!important}.cipher-workspace .cipher-vision-view .vision-results-head h2{margin-top:7px!important;font-size:23px!important;letter-spacing:-.03em!important;color:#eef3ee!important}.cipher-workspace .cipher-vision-view .vision-results-head h2 b{margin-left:6px!important;color:#d9ff55!important}
+.vision-results-summary{display:flex;justify-content:space-between;gap:10px;margin:14px 0;padding:9px 10px;border:1px solid rgba(255,255,255,.06);border-radius:9px;background:rgba(255,255,255,.018);font:7px "DM Mono",monospace;color:#68756d}.vision-results-summary b{color:#aab4ac;font-weight:500}.cipher-workspace .cipher-vision-view .vision-results-rule{display:none!important}
+.cipher-workspace .cipher-vision-view .vision-match-results{padding:0 2px 0 0!important;display:flex;flex-direction:column;gap:9px;min-height:0}.cipher-workspace .cipher-vision-view .vision-match-row{margin:0!important;border-radius:13px!important;padding:11px!important;background:rgba(255,255,255,.018)!important}.cipher-workspace .cipher-vision-view .vision-match-row:hover{transform:none!important;border-color:rgba(217,255,85,.28)!important}
+.cipher-workspace .cipher-vision-view .vision-results-foot{margin-top:auto;padding-top:12px!important;border-top:1px solid rgba(255,255,255,.07)!important;font:7px "DM Mono",monospace!important}.cipher-workspace .cipher-vision-view .vision-results-foot b{color:#d9ff55!important}
+.cipher-workspace .cipher-vision-view .vision-empty{padding:34px 14px!important;border:1px dashed rgba(255,255,255,.07);border-radius:12px;background:rgba(255,255,255,.012)}
+@media(max-width:1120px){.cipher-workspace .cipher-vision-view .vision-reference-layout{grid-template-columns:minmax(0,1fr)!important}.cipher-workspace .cipher-vision-view .vision-results-panel{min-height:420px!important}.cipher-workspace .cipher-vision-view .vision-identity-stage{min-height:720px!important}}
+@media(max-width:760px){.cipher-workspace .cipher-vision-view .vision-analysis-layout{grid-template-columns:1fr!important}.cipher-workspace .cipher-vision-view .vision-identity-stage{min-height:auto!important}.vision-upload-card{min-height:470px}.vision-upload-frame{min-height:330px}.vision-analysis-intro h3{font-size:24px}.vision-analysis-badge{display:none}}
+
+/* =========================================================
+   REVIEW QUEUE — COMPACT DENSITY PASS
+   Keep the existing symmetry while reducing the oversized controls.
+   ========================================================= */
+.cipher-workspace .review-view .review-screen-head{padding-top:13px!important;padding-bottom:11px!important}
+.cipher-workspace .review-view .review-header-btns .review-btn,
+.cipher-workspace .review-view #reviewViewAuditBtn{
+  min-height:29px!important;
+  height:29px!important;
+  padding:0 10px!important;
+  font-size:7px!important;
+  border-radius:8px!important;
+}
+.cipher-workspace .review-view .review-metrics-row{
+  gap:6px!important;
+  padding:7px 28px!important;
+}
+.cipher-workspace .review-view .review-metric-card{
+  min-height:50px!important;
+  padding:7px 10px!important;
+  border-radius:9px!important;
+}
+.cipher-workspace .review-view .review-metric-card .metric-label{
+  font-size:10px!important;
+  line-height:1.15!important;
+}
+.cipher-workspace .review-view .review-metric-card .metric-value{
+  font-size:18px!important;
+  margin-top:1px!important;
+}
+.cipher-workspace .review-view .review-toolbar{
+  padding:7px 28px!important;
+  gap:6px!important;
+}
+.cipher-workspace .review-view .review-category-tabs{gap:4px!important}
+.cipher-workspace .review-view .review-category-tabs .review-tab-btn{
+  min-height:31px!important;
+  height:31px!important;
+  padding:0 9px!important;
+  font-size:10px!important;
+  border-radius:9px!important;
+}
+.cipher-workspace .review-view .review-category-tabs .review-tab-btn .tab-count{
+  font-size:9px!important;
+  min-width:18px!important;
+  padding:2px 5px!important;
+}
+.cipher-workspace .review-view .review-secondary-bar{gap:5px!important}
+.cipher-workspace .review-view .review-search-box{
+  height:30px!important;
+  min-height:30px!important;
+  padding:0 9px!important;
+  border-radius:8px!important;
+}
+.cipher-workspace .review-view .review-search-box .search-icon:before{font-size:13px!important}
+.cipher-workspace .review-view .review-search-box input{font-size:8px!important}
+.cipher-workspace .review-view .review-dropdown-group{font-size:6px!important;gap:4px!important}
+.cipher-workspace .review-view .review-select{
+  height:30px!important;
+  min-height:30px!important;
+  padding:0 24px 0 8px!important;
+  border-radius:8px!important;
+  font-size:7px!important;
+}
+.cipher-workspace .review-view .review-bulk-actions{gap:5px!important}
+.cipher-workspace .review-view .review-select-all-label{
+  height:30px!important;
+  min-height:30px!important;
+  padding:0 8px!important;
+  border-radius:8px!important;
+  font-size:6px!important;
+}
+.cipher-workspace .review-view .review-btn-bulk-accept{
+  height:30px!important;
+  min-height:30px!important;
+  padding:0 9px!important;
+  border-radius:8px!important;
+  font-size:7px!important;
+}
+
+/* TIMELINE — match the GIS tool button typography/alignment. */
+#timelineView .timeline-side-rail .timeline-rail-btn{
+  min-height:48px!important;
+  height:48px!important;
+  padding:9px!important;
+  grid-template-columns:25px minmax(0,1fr)!important;
+  column-gap:10px!important;
+  align-items:center!important;
+  border-radius:7px!important;
+  text-align:left!important;
+}
+#timelineView .timeline-side-rail .timeline-rail-btn span{
+  width:25px!important;
+  height:25px!important;
+  display:grid!important;
+  place-items:center!important;
+  font:13px "DM Mono",monospace!important;
+  line-height:1!important;
+}
+#timelineView .timeline-side-rail .timeline-rail-btn b{
+  align-self:center!important;
+  display:block!important;
+  font:10px "DM Mono",monospace!important;
+  font-weight:700!important;
+  letter-spacing:.08em!important;
+  line-height:1.1!important;
+  color:#b9bfbc!important;
+  white-space:nowrap!important;
+}
+#timelineView .timeline-side-rail .timeline-rail-btn small{display:none!important}
+
+/* Keep CASE DATABASE filters inside the timeline, pinned to its top-right. */
+#timelineView .timeline-feed-toolbar{display:flex!important;align-items:center!important}
+#timelineView .timeline-feed-tools{
+  flex:1 1 auto!important;
+  display:flex!important;
+  justify-content:flex-end!important;
+  align-items:center!important;
+  min-width:0!important;
+}
+#timelineView .timeline-search{margin-left:auto!important}
+#timelineView .timeline-filter-group{
+  margin-left:2px!important;
+  flex:0 0 auto!important;
+  height:34px!important;
+  border-radius:8px!important;
+}
+#timelineView .timeline-filter{
+  height:32px!important;
+  min-width:52px!important;
+  padding:0 11px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  font:10px "DM Mono",monospace!important;
+  line-height:1!important;
+}
+
+
+/* =========================================================
+   CASE REPORT — READABILITY PASS
+   Increase all dense micro-copy without changing the report layout.
+   ========================================================= */
+.evidence-workspace .report-eyebrow,
+.evidence-workspace .report-section-head>div>span,
+.evidence-workspace .report-cover-meta label,
+.evidence-workspace .report-form-grid label,
+.evidence-workspace .report-kpi span,
+.evidence-workspace .report-count,
+.evidence-workspace .report-status,
+.evidence-workspace .report-save-state,
+.evidence-workspace .report-table th,
+.evidence-workspace .legal-grid span,
+.evidence-workspace .legal-notes>span {
+  font-size:9px !important;
+  line-height:1.4 !important;
+}
+.evidence-workspace .report-kpi small,
+.evidence-workspace .report-table td,
+.evidence-workspace .entity-row small,
+.evidence-workspace .evidence-row small,
+.evidence-workspace .finding-list small,
+.evidence-workspace .source-register div,
+.evidence-workspace .report-final-note,
+.evidence-workspace .report-note-footer,
+.evidence-workspace .legal-notes p,
+.evidence-workspace .location-card small {
+  font-size:10px !important;
+  line-height:1.65 !important;
+}
+.evidence-workspace .report-table td,
+.evidence-workspace .entity-row b,
+.evidence-workspace .evidence-row b,
+.evidence-workspace .location-card span,
+.evidence-workspace .finding-list strong,
+.evidence-workspace .legal-grid b {
+  font-size:11px !important;
+  line-height:1.45 !important;
+}
+.evidence-workspace .evidence-row b { font-size:12px !important; }
+.evidence-workspace .evidence-row em,
+.evidence-workspace .entity-row em { font-size:9px !important; }
+.evidence-workspace .evidence-icon { font-size:8px !important; }
+.evidence-workspace .report-cover-main p,
+.evidence-workspace .ai-summary-box>p { font-size:12px !important; line-height:1.75 !important; }
+.evidence-workspace .report-form-grid input,
+.evidence-workspace .report-form-grid textarea,
+.evidence-workspace .report-cover-meta input,
+.evidence-workspace .investigator-notes { font-size:11px !important; }
+.evidence-workspace .ai-insight-grid span { font-size:9px !important; }
+.evidence-workspace .ai-insight-grid b { font-size:10px !important; }
+
+/* =========================================================
+   FINAL UI CONSISTENCY PASS — GIS LANGUAGE / AUDIT READABILITY
+   ========================================================= */
+
+/* Timeline action controls intentionally mirror the GIS tool buttons. */
+#timelineView .timeline-side-rail .timeline-rail-btn{
+  min-height:48px!important;
+  height:auto!important;
+  padding:12px 9px!important;
+  grid-template-columns:25px minmax(0,1fr)!important;
+  column-gap:11px!important;
+  align-items:center!important;
+  border-radius:0!important;
+  background:rgba(16,20,20,.62)!important;
+  border:1px solid #292f30!important;
+  box-sizing:border-box!important;
+}
+#timelineView .timeline-side-rail .timeline-rail-btn:hover,
+#timelineView .timeline-side-rail .timeline-rail-btn.active{
+  border-color:#555d58!important;
+  background:#111516!important;
+  color:#eef0ed!important;
+}
+#timelineView .timeline-side-rail .timeline-rail-btn span{
+  width:25px!important;
+  height:25px!important;
+  display:grid!important;
+  place-items:center!important;
+  border:1px solid #343b38!important;
+  color:#aab0ac!important;
+  font:13px "DM Mono",monospace!important;
+  line-height:1!important;
+  box-sizing:border-box!important;
+}
+#timelineView .timeline-side-rail .timeline-rail-btn b{
+  align-self:center!important;
+  display:block!important;
+  min-width:0!important;
+  font:8px "DM Mono",monospace!important;
+  font-weight:400!important;
+  letter-spacing:.08em!important;
+  line-height:1.2!important;
+  color:#b9bfbc!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+}
+
+/* Keep the status filter controls cleanly parked at the timeline top-right. */
+#timelineView .timeline-feed-tools{
+  justify-content:flex-end!important;
+  align-items:center!important;
+}
+#timelineView .timeline-filter-group{
+  height:34px!important;
+  align-self:center!important;
+}
+#timelineView .timeline-filter{
+  height:32px!important;
+  font:8px "DM Mono",monospace!important;
+  font-weight:400!important;
+  letter-spacing:.04em!important;
+}
+
+/* Audit Log: increase readability without changing weight/boldness. */
+.audit-modal-card .audit-modal-body,
+.audit-modal-card .audit-trail-table{
+  font-size:14px!important;
+}
+.audit-modal-card .audit-trail-table th{
+  font-size:12px!important;
+}
+.audit-modal-card .audit-trail-table td{
+  font-size:14px!important;
+  line-height:1.5!important;
+}
+.audit-modal-card .audit-action-chip{
+  font-size:12px!important;
+}
+
+/* Cipher Vision is identity-only; suppress any legacy refresh control if present. */
+.cipher-workspace .cipher-vision-view .vision-refresh,
+.cipher-vision-view .vision-refresh,
+.vision-refresh{
+  display:none!important;
+}
+
+/* =========================================================
+   FINAL GIS / VISION CLEANUP
+   ========================================================= */
+/* Cipher Vision navigation is identity-only: no LIVE badge/pill. */
+.cipher-workspace .workspace-sidebar .vision-side-item em,
+.workspace-sidebar .vision-side-item em,
+.cipher-workspace .vision-side-item .vision-live-pill,
+.cipher-workspace .cipher-vision-view .vision-live-pill{
+  display:none !important;
+}
+
+/* Give the GIS inspector more working width in immersive fullscreen. */
+.gis-workbench:fullscreen{
+  grid-template-columns:235px minmax(0,1fr) 370px !important;
+  gap:14px !important;
+}
+.gis-workbench:fullscreen .gis-inspector-stack{
+  min-width:0 !important;
+}
+.gis-workbench:fullscreen .gis-inspector-head{
+  padding-left:18px !important;
+  padding-right:18px !important;
+}
+.gis-workbench:fullscreen .gis-inspector-body{
+  padding-bottom:24px !important;
+}
+
+@media(max-width:1100px){
+  .gis-workbench:fullscreen{
+    grid-template-columns:200px minmax(0,1fr) 330px !important;
+  }
+}
+@media(max-width:900px){
+  .gis-workbench:fullscreen{
+    grid-template-columns:70px minmax(0,1fr) 300px !important;
+  }
+}
+
+/* =========================================================
+   FINAL USER-SPECIFIC POLISH — REVIEW / TIMELINE / VISION
+   ========================================================= */
+
+/* REVIEW QUEUE: only the four metric titles are intentionally large. */
+.cipher-workspace .review-view .review-queue-header{
+  font-size:9px!important;
+  line-height:1.3!important;
+  font-weight:700!important;
+}
+.cipher-workspace .review-view .review-queue-sort-note{
+  font-size:7px!important;
+  line-height:1.35!important;
+  font-weight:400!important;
+}
+.cipher-workspace .review-view .review-metric-card .metric-label{
+  font-size:17px!important;
+  line-height:1.2!important;
+  font-weight:700!important;
+}
+/* Everything else in the queue stays compact/readable rather than headline-sized. */
+.cipher-workspace .review-view .finding-type-badge{font-size:9px!important;line-height:1.25!important}
+.cipher-workspace .review-view .review-card-desc{font-size:10px!important;line-height:1.5!important}
+.cipher-workspace .review-view .review-card-quote{font-size:10px!important;line-height:1.5!important}
+.cipher-workspace .review-view .review-card-meta{font-size:9px!important;line-height:1.4!important}
+.cipher-workspace .review-view .card-source-tag{font-size:9px!important;line-height:1.3!important}
+.cipher-workspace .review-view .card-status-pill{font-size:8px!important;line-height:1.2!important}
+.cipher-workspace .review-view .btn-card-action{font-size:8px!important;min-height:30px!important;padding:6px 10px!important}
+.cipher-workspace .review-view .review-search-box input{font-size:9px!important}
+.cipher-workspace .review-view .review-dropdown-group{font-size:8px!important}
+.cipher-workspace .review-view .review-select{font-size:8px!important}
+.cipher-workspace .review-view .review-select-all-label{font-size:8px!important}
+.cipher-workspace .review-view .review-btn{font-size:8px!important;min-height:30px!important;padding:6px 10px!important}
+.cipher-workspace .review-view .inspector-section-label{font-size:9px!important;line-height:1.35!important}
+.cipher-workspace .review-view .form-row label{font-size:9px!important}
+.cipher-workspace .review-view .review-textarea{font-size:10px!important}
+.cipher-workspace .review-view .decision-note{font-size:9px!important}
+/* Audit log: modest readability increase only; do not add boldness. */
+.audit-modal-card .audit-modal-body,.audit-modal-card .audit-trail-table{font-size:12px!important;font-weight:400!important}
+.audit-modal-card .audit-trail-table th{font-size:10px!important;font-weight:700!important}
+.audit-modal-card .audit-trail-table td{font-size:12px!important;line-height:1.5!important;font-weight:400!important}
+.audit-modal-card .audit-action-chip{font-size:10px!important;font-weight:700!important}
+
+/* TIMELINE: use the GIS search bar language and GIS tool-button geometry exactly. */
+#timelineView .timeline-side-rail .timeline-rail-btn{
+  width:100%!important;
+  min-height:0!important;
+  height:auto!important;
+  padding:12px 9px!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:11px!important;
+  border:1px solid #292f30!important;
+  border-radius:0!important;
+  background:rgba(16,20,20,.62)!important;
+  color:#8d9490!important;
+  text-align:left!important;
+  box-sizing:border-box!important;
+}
+#timelineView .timeline-side-rail .timeline-rail-btn:hover,
+#timelineView .timeline-side-rail .timeline-rail-btn.active{
+  border-color:#555d58!important;
+  color:#eef0ed!important;
+  background:#111516!important;
+  box-shadow:none!important;
+  transform:none!important;
+}
+#timelineView .timeline-side-rail .timeline-rail-btn span{
+  width:25px!important;height:25px!important;display:grid!important;place-items:center!important;
+  border:1px solid #343b38!important;color:#aab0ac!important;
+  font:13px "DM Mono",monospace!important;line-height:1!important;flex:none!important;
+}
+#timelineView .timeline-side-rail .timeline-rail-btn b{
+  display:block!important;min-width:0!important;
+  font:10px "DM Mono",monospace!important;font-weight:400!important;
+  color:#b9bfbc!important;letter-spacing:.08em!important;line-height:1.2!important;
+  white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;
+}
+
+/* GIS search bar dimensions/typography copied to Timeline search. */
+#timelineView .timeline-search{
+  width:min(560px,42vw)!important;
+  height:44px!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:10px!important;
+  border:1px solid #292f30!important;
+  border-radius:0!important;
+  background:rgba(12,16,16,.76)!important;
+  padding:0 12px!important;
+  box-sizing:border-box!important;
+  box-shadow:none!important;
+}
+#timelineView .timeline-search:focus-within{
+  border-color:rgba(217,255,85,.38)!important;
+  box-shadow:0 0 0 2px rgba(217,255,85,.025)!important;
+}
+#timelineView .timeline-search span{color:#6e7772!important;font:17px "DM Mono",monospace!important}
+#timelineView .timeline-search input{min-width:0!important;flex:1!important;border:0!important;outline:0!important;background:transparent!important;color:#dfe4e0!important;font:10px "DM Mono",monospace!important;line-height:1.2!important}
+#timelineView .timeline-search input::placeholder{color:#4e5652!important;font-size:10px!important}
+
+/* Timeline status filters sit beside the GIS-style search, without changing the GIS language. */
+#timelineView .timeline-filter-group{height:44px!important;border-radius:0!important;border:1px solid #292f30!important;background:#0b0f10!important;overflow:hidden!important}
+#timelineView .timeline-filter{height:42px!important;min-width:62px!important;padding:0 11px!important;border:0!important;border-right:1px solid #292f30!important;border-radius:0!important;background:#0b0f10!important;color:#66706a!important;font:8px "DM Mono",monospace!important;letter-spacing:.06em!important}
+#timelineView .timeline-filter:last-child{border-right:0!important}
+#timelineView .timeline-filter.active{background:rgba(217,255,85,.035)!important;color:#d9ff55!important}
+
+/* CIPHER VISION: spacious, functional ArcFace workspace; no decorative image required. */
+.cipher-workspace .cipher-vision-view .vision-reference-layout{
+  grid-template-columns:minmax(0,1fr) minmax(320px,380px)!important;
+  gap:18px!important;
+  min-height:calc(100vh - 205px)!important;
+  align-items:stretch!important;
+}
+.cipher-workspace .cipher-vision-view .vision-identity-stage,
+.cipher-workspace .cipher-vision-view .vision-results-panel{
+  min-height:0!important;
+  height:100%!important;
+}
+.cipher-workspace .cipher-vision-view .vision-identity-stage{padding:26px!important}
+.cipher-workspace .cipher-vision-view .vision-stage-head{padding-bottom:20px!important}
+.cipher-workspace .cipher-vision-view .vision-analysis-layout{
+  grid-template-columns:minmax(0,1.08fr) minmax(330px,.92fr)!important;
+  gap:18px!important;
+  flex:1 1 auto!important;
+  min-height:0!important;
+  padding-top:18px!important;
+}
+.cipher-workspace .cipher-vision-view .vision-upload-card{
+  min-height:0!important;
+  height:100%!important;
+  padding:18px!important;
+}
+.cipher-workspace .cipher-vision-view .vision-upload-frame{
+  min-height:0!important;
+  height:auto!important;
+}
+.cipher-workspace .cipher-vision-view .vision-analysis-panel{
+  min-height:0!important;
+  height:100%!important;
+  padding:25px!important;
+  gap:26px!important;
+}
+.cipher-workspace .cipher-vision-view .vision-analysis-intro h3{font-size:30px!important}
+.cipher-workspace .cipher-vision-view .vision-analysis-intro p{max-width:520px!important;font-size:12px!important;line-height:1.75!important}
+.cipher-workspace .cipher-vision-view .vision-analysis-steps{gap:12px!important}
+.cipher-workspace .cipher-vision-view .vision-analysis-steps article{padding:16px!important;min-height:76px!important}
+.cipher-workspace .cipher-vision-view .vision-analysis-steps strong{font-size:13px!important}
+.cipher-workspace .cipher-vision-view .vision-analysis-steps article span{font-size:9px!important;line-height:1.55!important}
+.cipher-workspace .cipher-vision-view .vision-analysis-note{padding:16px!important}
+.cipher-workspace .cipher-vision-view .vision-analysis-note b{font-size:11px!important;line-height:1.6!important}
+.cipher-workspace .cipher-vision-view .vision-results-panel{padding:24px!important}
+.cipher-workspace .cipher-vision-view .vision-match-results{flex:1 1 auto!important;max-height:none!important;overflow:auto!important}
+.cipher-workspace .cipher-vision-view .vision-empty{min-height:220px!important;height:100%!important;box-sizing:border-box!important}
+
+@media(max-width:1120px){
+  .cipher-workspace .cipher-vision-view .vision-reference-layout{grid-template-columns:1fr!important;min-height:0!important}
+  .cipher-workspace .cipher-vision-view .vision-identity-stage{min-height:720px!important;height:auto!important}
+  .cipher-workspace .cipher-vision-view .vision-results-panel{min-height:460px!important;height:auto!important}
+}
+@media(max-width:760px){
+  #timelineView .timeline-search{width:100%!important}
+  .cipher-workspace .cipher-vision-view .vision-analysis-layout{grid-template-columns:1fr!important}
+  .cipher-workspace .cipher-vision-view .vision-upload-card{min-height:480px!important}
+  .cipher-workspace .cipher-vision-view .vision-analysis-panel{height:auto!important}
+}
+/* Audit log target: readable +10–12px-class treatment, without extra bolding. */
+.audit-modal-card .audit-modal-body,.audit-modal-card .audit-trail-table{font-size:14px!important;font-weight:400!important}
+.audit-modal-card .audit-trail-table th{font-size:12px!important;font-weight:400!important}
+.audit-modal-card .audit-trail-table td{font-size:14px!important;line-height:1.5!important;font-weight:400!important}
+.audit-modal-card .audit-action-chip{font-size:12px!important;font-weight:400!important}
+
+
+/* CIPHER VISION — entry sequence removed; workspace opens directly. */
+/* AI agent identity mark — restrained, technical, non-futuristic. */
+.cipher-ai-launcher .cipher-ai-orb img{content:url('/assets/cipher-agent-mark.svg');filter:drop-shadow(0 0 8px rgba(217,255,85,.25))}
+
+/* Timeline controls — GIS geometry retained, with the requested neon-readable action text. */
+#timelineView .timeline-side-rail .timeline-rail-btn b{
+  color:#d9ff55!important;
+  text-shadow:0 0 7px rgba(217,255,85,.34),0 0 16px rgba(217,255,85,.12)!important;
+}
+#timelineView .timeline-side-rail .timeline-rail-btn span{
+  color:#d9ff55!important;
+  border-color:rgba(217,255,85,.28)!important;
+  text-shadow:0 0 7px rgba(217,255,85,.32)!important;
+}
+#timelineView .timeline-side-rail .timeline-rail-btn:hover b,
+#timelineView .timeline-side-rail .timeline-rail-btn.active b{
+  color:#efffc5!important;
+  text-shadow:0 0 8px rgba(217,255,85,.55),0 0 18px rgba(217,255,85,.18)!important;
+}
+
+/* REVIEW QUEUE — final compact filter-bar refinement. */
+.cipher-workspace .review-view.active-view .review-secondary-bar{
+  display:grid!important;
+  grid-template-columns:minmax(300px,1fr) minmax(150px,180px) minmax(150px,180px)!important;
+  align-items:center!important;
+  flex-wrap:nowrap!important;
+  gap:8px!important;
+}
+.cipher-workspace .review-view.active-view .review-search-box{
+  height:35px!important;
+  min-height:35px!important;
+  padding:0 10px!important;
+}
+.cipher-workspace .review-view.active-view .review-search-box input{
+  font-size:9.5px!important;
+}
+.cipher-workspace .review-view.active-view .review-dropdown-group{
+  min-width:0!important;
+  width:100%!important;
+  display:grid!important;
+  grid-template-columns:auto minmax(0,1fr)!important;
+  align-items:center!important;
+  gap:5px!important;
+  white-space:nowrap!important;
+}
+.cipher-workspace .review-view.active-view .review-select{
+  width:100%!important;
+  min-width:0!important;
+  height:35px!important;
+  min-height:35px!important;
+  font-size:8px!important;
+}
+.cipher-workspace .review-view.active-view .review-bulk-actions{
+  flex:1 1 100%!important;
+  width:100%!important;
+}
+@media(max-width:900px){
+  .cipher-workspace .review-view.active-view .review-secondary-bar{
+    grid-template-columns:minmax(0,1fr) minmax(145px,1fr) minmax(145px,1fr)!important;
+  }
+}
+@media(max-width:700px){
+  .cipher-workspace .review-view.active-view .review-secondary-bar{
+    grid-template-columns:1fr 1fr!important;
+  }
+  .cipher-workspace .review-view.active-view .review-search-box{grid-column:1/-1!important}
+}
+
+/* =========================================================
+   CIPHER VISION — FINAL SPACIOUS IDENTITY WORKSPACE
+   No entry animation; use the available workspace instead of stacking.
+   ========================================================= */
