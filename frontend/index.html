@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1019">
+  <meta name="description" content="CIPHER AI — responsible, evidence-grounded case document analysis powered by Gemma.">
+  <title>CIPHER AI — Evidence Intelligence</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="/" aria-label="CIPHER AI home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span><strong>CIPHER</strong><small>INTELLIGENCE WORKSPACE</small></span>
+      </a>
+      <div class="side-label">WORKSPACE</div>
+      <button class="nav-item active" data-view="analyze"><span class="nav-icon">⌘</span> Evidence analysis</button>
+      <button class="nav-item" data-view="entities"><span class="nav-icon">◇</span> Entity extraction</button>
+      <div class="side-label second">PROJECT</div>
+      <div class="project-chip"><span class="status-dot"></span><span><b>Demo case</b><small>Synthetic sample data</small></span></div>
+      <div class="sidebar-bottom">
+        <div class="model-card">
+          <span class="model-orb">G</span>
+          <div><b>Gemma 4</b><small>AI engine</small></div>
+          <span class="live-dot" id="modelDot"></span>
+        </div>
+        <p class="sidebar-note">AI-assisted review<br>Human decisions remain essential.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>Workspace</span><i>/</i><b id="breadcrumbCurrent">Evidence analysis</b></div>
+        <div class="top-actions"><span class="privacy-pill"><span></span> Synthetic data mode</span><div class="avatar">CI</div></div>
+      </header>
+
+      <section class="intro">
+        <div class="eyebrow"><span class="eyebrow-line"></span> EVIDENCE INTELLIGENCE / GEMMA 4</div>
+        <h1>Clarity in every <em>connection.</em></h1>
+        <p class="intro-copy">Turn complex case notes into structured, reviewable intelligence. Ask questions, surface recorded facts, and keep every conclusion grounded in the source material.</p>
+        <div class="intro-meta"><span class="secure-icon">⌑</span> Source-led analysis <span class="meta-sep">·</span> Human-reviewed <span class="meta-sep">·</span> No automated guilt decisions</div>
+      </section>
+
+      <div class="workspace-grid">
+        <section class="panel source-panel">
+          <div class="panel-heading">
+            <div><div class="panel-kicker">01 / SOURCE MATERIAL</div><h2>Case document</h2></div>
+            <span class="tag">INPUT</span>
+          </div>
+          <p class="panel-description">Paste a report or start with the synthetic demo below. Do not use sensitive real-world case data in this prototype.</p>
+          <div class="sample-row"><span class="sample-indicator"></span><span>DEMO-042 · Sample incident notes</span><button id="loadDemo" class="text-button">Load sample ↗</button></div>
+          <label class="field-label" for="caseText">SOURCE TEXT <span id="charCount">0 / 30,000</span></label>
+          <textarea id="caseText" maxlength="30000" placeholder="Paste the case narrative, incident notes, or evidence summary here…"></textarea>
+          <div class="source-footer"><span><span class="tiny-lock">⌑</span> Processed for this request</span><button id="clearText" class="text-button muted">Clear text</button></div>
+          <div class="divider"></div>
+          <div class="panel-heading compact">
+            <div><div class="panel-kicker">02 / ANALYSIS MODE</div><h2>What should Gemma do?</h2></div>
+          </div>
+          <div class="mode-options">
+            <button class="mode-card selected" data-mode="summary"><span class="mode-symbol">≡</span><b>Evidence brief</b><small>Summarize facts & gaps</small><span class="radio-mark"></span></button>
+            <button class="mode-card" data-mode="entities"><span class="mode-symbol">◇</span><b>Extract entities</b><small>People, places, dates</small><span class="radio-mark"></span></button>
+            <button class="mode-card" data-mode="question"><span class="mode-symbol">↗</span><b>Ask a question</b><small>Query supplied material</small><span class="radio-mark"></span></button>
+          </div>
+          <label class="field-label question-label" for="question">INVESTIGATOR QUESTION</label>
+          <textarea id="question" class="question-input" rows="2">Summarize the recorded facts and identify what needs verification.</textarea>
+          <div class="run-row"><span class="run-hint"><span class="run-hint-dot"></span> Gemma 4 · Server-side inference</span><button id="analyzeBtn" class="primary-button"><span>Run analysis</span><span>↗</span></button></div>
+          <p class="error-message" id="errorMessage" role="alert" hidden></p>
+        </section>
+
+        <section class="panel results-panel">
+          <div class="panel-heading">
+            <div><div class="panel-kicker">03 / MODEL OUTPUT</div><h2>Analysis workspace</h2></div>
+            <span class="tag tag-ai"><span></span> GEMMA POWERED</span>
+          </div>
+          <div id="emptyState" class="empty-state">
+            <div class="empty-illustration"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="core-g">G</div><span class="orbit-node node-one"></span><span class="orbit-node node-two"></span><span class="orbit-node node-three"></span></div>
+            <h3>Your evidence, understood.</h3>
+            <p>Run an analysis to see a structured response generated by Gemma 4 from the material you provide.</p>
+            <div class="empty-features"><span>✳ Fact-focused</span><span>⌑ Source-aware</span><span>◉ Human-reviewed</span></div>
+          </div>
+          <div id="loadingState" class="loading-state" hidden><div class="loader"></div><h3>Reviewing the material</h3><p>Gemma is preparing a response from the supplied text…</p><div class="loading-bar"><span></span></div></div>
+          <div id="resultState" hidden>
+            <div class="result-meta"><span class="result-status"><span></span> RESPONSE RECEIVED</span><span id="modelName">Gemma 4</span></div>
+            <div id="resultText" class="result-text" aria-live="polite"></div>
+            <div class="review-notice"><span class="notice-icon">!</span><div><b>Human verification required</b><p>AI output may be incomplete or incorrect. Verify every statement against the original source before taking action.</p></div></div>
+            <div class="result-actions"><button id="copyResult" class="secondary-button">Copy analysis</button><button id="newAnalysis" class="secondary-button">New analysis ↗</button></div>
+          </div>
+          <div class="results-bottom"><span><span class="tiny-lock">⌑</span> AI output is advisory, not proof</span><span> CIPHER AI <b>·</b> Prototype v0.1</span></div>
+        </section>
+      </div>
+      <footer class="page-footer"><span>BUILT FOR RESPONSIBLE TECHNOLOGY</span><span>Social impact through explainable, human-led analysis.</span></footer>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+SYNTHETIC TRAINING CASE — DEMO-042
+This is fictional training material created for software demonstration. All names, identifiers, dates, and locations are invented.
+
+Incident note (2026-08-14, 18:40): A report recorded that a blue delivery van was observed near Warehouse 12. The note does not record the registration number or the observer's identity.
+
+Interview note (2026-08-15): A fictional witness identified in the record as W-02 stated that they saw an individual called "R. Sen" speaking with a person wearing a grey jacket near the east entrance. The witness said they were uncertain about the time.
+
+Property log (2026-08-16): One sealed storage device, item E-17, was logged by Officer O-04. The log states the seal was intact at intake. The contents of the device have not been reviewed in this sample.
+
+Location note: Warehouse 12 and the east entrance are mentioned in separate notes. The material does not establish that the van, R. Sen, or item E-17 are connected.
+
+Review note: No conclusion about wrongdoing can be drawn from this fictional material. Original records, timestamps, identity details, and chain-of-custody documentation would need independent verification.
